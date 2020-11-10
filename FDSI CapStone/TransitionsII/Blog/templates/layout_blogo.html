@@ -1,0 +1,369 @@
+
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>TransitionsII {% block title %}
+    {% endblock %}</title>
+
+
+
+    <!-- Bootstrap core CSS -->
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<link href="{% static 'css/main.css' %}" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+        <!-- Custom styles for this template -->
+    <link href="{% static 'css/blogo.css' %}" rel="stylesheet">
+  </head>
+  <body>
+   <style>
+    .hello-msg{
+      font-size: 15px;
+      color: white;
+      margin-right: 20px;
+    }
+  </style>
+    <header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Transitions</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/account/register.html">Register<span class="sr-only">(current)</span></a>
+        </li>
+          <li class="nav-item active">
+          <a class="nav-link" href="/account/login.html">Login<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/expenses/add_expense.html">Budget Expenses</a>
+        </li>
+         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blogospere/useful_links.html">Useful Links</a>
+        </li>
+      </ul>
+      <form class="form-inline mt-2 mt-md-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+    
+    <span class="hello-msg">Hello,  {{request.user}} </span>
+    <span><a class="hello-msg"  href="{% url 'logout' %}"></a></span>
+  </nav>
+</header>
+
+<main role="main">
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h1>Example headline.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Another example headline.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+        <div class="container">
+          <div class="carousel-caption text-right">
+            <h1>One more, just for fun.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <h2>Budgets</h2>
+        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <h2>Resumes</h2>
+        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <h2>Who's hiring</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">THE TOP 10 LEGAL DOCUMENTS EVERYONE NEEDS<span class="text-muted"> --Debra K. Schuster, M.H.A., J.D., from St. Louis, Missouri.  Attorney Schuster is a Partner member of the national ElderCare Matters Alliance.</span></h2>
+        <p style="font-weight: bold;">Posted January 4th, 2017</p>   
+                  
+          <p>This week’s article about Legal Documents was written 
+          Everyone hates going to the dentist. However, if you don’t go, bad things can happen that may have been prevented if you had gone. The same is true with having legal documents created. You may say to yourself, “Well, I see your point, but I can go on the internet and create documents for myself using one of the do-it-yourself legal websites that are a lot less expensive (and don’t require an appointment) than what a lawyer will charge me.</p>
+          
+          <p>Ok. But would you do your own dental work?</p>
+          
+         <p> Now that this is out of the way, there are 10 legal documents that all adults (people over the age of 18) need.</p>
+          
+      <p>Drum Roll Please:</p>
+          
+      <p>1. Durable Power of Attorney for Health Care. This document allows you to name who you want to make health care decisions for you when you are unable to do so for yourself. (During surgery, if you have an incapacitating illness, are unconscious from an accident or traumatic incident)</p>
+
+        <p>2. Living Will. This documents stands on its own, in that it expresses your end-of-life treatment wishes to whatever health care provider (hospital, doctor, etc) reads it. You can state that you want all, some or no artificial means of maintaining your life (i.e., ventilator, CPR, dialysis, surgery, etc) when you are at the end of your life.</p>
+
+        <p>3.  Financial Durable Power of Attorney. This documents allows you to appoint who you want to make financial decisions for you (pay bills, enter into contracts for goods and services for you, handle your insurance and all assets you own) if you are determined by your doctor to be unable to handle your financial decisions yourself.</p>
+
+        <p> VERY IMPORTANT NOTE: Choose a person who is financially secure and responsible to serve in this role. It is very tempting to someone who is not financially stable to dip into your money (“I am just borrowing this money – I’ll pay it back) at a time when every cent should be used for your care.</p>
+
+        <p>4.  Beneficiary Deed. If you own real estate, you should have this type of deed created to name who you want to inherit your real estate (home, timeshare, vacation home, empty lot) when you die. If you do not have a beneficiary deed (or your property is not held in a trust), it will end up in probate.</p>
+
+        <p>5.  Beneficiary designations. ON EVERYTHING – life insurance, money market accounts, IRAs, 401K and other retirement accounts, stocks, bonds, etc.</p>
+
+          <p>6.  HIPAA authorization. This is the form allows you to name who you want to be able to contact your doctor, hospital, any health care provider to obtain information and discuss your care when you are still making your own health care decisions (for example, if you have just had a root canal, if your adult child wants to call your dentist to request a prescription for pain medication)</p>
+
+          <p>7.  POD and TOD designations. Banks allow you to make Pay Upon Death designations on your checking and savings accounts with a Pay Upon Death (POD) card naming who you want to inherit the account balance when you die; The Department of Motor Vehicles has a Transfer Upon Death form (TOD) to enable you to name who you want to inherit your vehicle when you die.</p>
+
+          <p>8.  Digital Asset Inventory. You should create and keep an up-to-date a list of ALL on-line accounts, reward programs, passwords, financial and bill pay sites, social media, professional organization profiles, etc. to enable your family to manage your on-line presence when you are incapacitated and die.</p>
+
+          <p>9. Last Will and Testament. This is a document that allows you to name who you want to handle your affairs after you die (your “Personal Representative”) and to explain how you want your assets distributed after you die. A WILL DOES NOT KEEP ASSETS OUT OF PROBATE – YOU MUST MAKE BENEFICIARY, TOD AND POD DESIGNATIONS ON EVERYTHING!</p>
+
+          <p>10.  Personal Property Memorandum. This is a legal document you CAN create yourself that lists personal, non-monetary, sentimental or family heirlooms you want to specifically pass to identified individuals when you die. This list should be attached to your Last Will and Testament.</p>
+
+          <p>11.  (I know I said 10, but there is a #11 – a Trust. There are many different types of trusts with varying uses, but the most common type of trust is the Revocable Living Trust that allows you to title almost all of your assets in the name of your trust (other than IRAs, retirement accounts and bonds) so these assets will be handled by the person you name as Trustee according to the instructions in your trust. Not everyone needs a trust – so long as they make beneficiary designations on everything. However, when properly funded and handled, a trust keeps all of your assets out of probate and allows you to be as creative and detailed as you wish regarding when and how you want your property distributed after you die (for example, to delay when an 18-year-old can receive a large inheritance).</p>
+          
+          <p>  So, go see your dentist and a lawyer now to have these documents prepared to make sure you are ready if/when you need to use them.</p>
+          
+      
+
+<p style="font-weight: bold;">Some additional documents to gather when leaving home: From The Survivors Handbook - Making a safety Plan</p>
+<ul>
+ 
+    <li>Some form of identification.</li>
+
+    <li>Birth certificate</li>
+
+    <li>Passports, visas and work permits.</li>
+
+    <li>>Bankbooks, cheque book and credit and debit cards.</li>
+
+    <li>Driving licence (if you have one) and car registration documents, if applicable.</li>
+
+    <li>Copies of documents relating to your housing tenure (for example, mortgage details or lease and rental agreements).</li>
+
+    <li>Insurance documents, including national insurance number</li>
+
+    <li>Clothing and toiletries</li>
+
+    <li>Banking/account information</li>
+
+    <li>Tax returns</li>
+
+    <li>Car title and any car loan documents (or copies of these items)</li>
+</ul>
+<p style="font-weight: bold;">Misc. Items</p>
+<ul>
+    <li>Money</li>
+
+    <li>Keys for house, car, and place of work. (You could get an extra set of keys cut, and put them in your emergency bag.)</li>
+
+    <li>Address book.</li>
+
+    <li>Family photographs, your diary, jewellery, small items of sentimental value.</li>
+
+    <li>Clothing and toiletries</li>
+
+    <li>Medication and prescriptions as well as medical supplies. Consider taking a first aid kit and basics for dealing with colds and flus (decongestants, Immodium, anti-nausea drugs, Tylenol, Ibuprofen, Tums, Pepto Bismol, etc.). Always ask a pharmacist or doctor about taking new medications or over-the-counter drugs to prevent dangerous interactions or reactions</li>
+
+    <li>Laptop, tablet, cell phone, cords, USBs, etc.</li>
+</ul>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="/img/pexels-cottonbro-4553266 (1).jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Make a Plan to Move to Another State <span class="text-muted small">  Smart About Money</span></h2>
+
+  <hr>     
+
+ <p>According to a recent Gallup poll, 33 percent of Americans wish they could move out of state. Whether you are a recent college grad or a midcareer professional, pulling up roots and moving to a new state comes with its share of headaches. Is it better to hire a mover or rent a truck? How will you insure your belongings during transit? What expenses will your new employer cover? Before you break out the boxes and shipping tape, consider these 10 ways to simplify the moving process.</p>
+
+<h4>Make a Budget and Start Saving</h4>
+<p>Shipping, gas, hotel and insurance costs pile up quickly. Add security deposits for renting and starting utilities in your new home, and it becomes clear that moving requires quite a few upfront expenses that can drain your bank account. Making a budget and a savings plan to cover the costs will help smooth the transition, but don’t rely on the security deposit from your old place to cover those costs. It often takes weeks and sometimes longer for a landlord to refund your security deposit (check your lease to be sure).
+
+Your budget planning shouldn’t stop when you get to your destination. Cost of living varies from region to region, and your current salary might not afford you the same luxuries after the move. Use a cost of living calculator to determine how far your current salary will take you in specific cities across the country to see if moving out of state is a smart fiscal idea.</p>
+
+<h4>Check What Your Employer Will Cover</h4>
+<p>Some companies cover relocation costs, but it is important to know exactly what that entails. Your employer may reimburse items such as shipping services, packing services, transportation and travel expenses associated with searching for your new home — if you are moving specifically for the job. Negotiate during the hiring process and ask whether your employer will cover other costs such as lease cancellation fees, realtor assistance, temporary housing and storage.</p>
+
+
+<h4>Decide What You’re Moving</h4>
+<p>Is it really cost-effective to move a decade-old, 100-pound couch and an outdated TV? Take stock of everything you own — especially bulky furniture and electronics — and calculate if it would make more sense to sell the items before you move and reinvest your earnings in replacements once you get to your destination. Don’t forget to factor in what you might save in time, money and energy by not hauling these heavy items. If you can’t afford brand new furniture, consider hunting down preowned items on free online message boards. Use your moving truck to transport your new finds.</p>
+
+<h4>Plan for Partial-Year State Taxes</h4>
+<p>While you are deducting expenses on your federal tax return at tax time, keep in mind that you may have to file two separate state tax returns when you move out of state. If you earned income in two different states during the fiscal year — unless you are moving to or from a state that does not collect individual income taxes, such as Texas, Nevada or Washington — you will need to file a return in each state to cover the time you lived there.</p>
+
+<h4>Research Movers, Truck Rentals and Shipping Companies</h4>
+<p>The three most popular ways to transport belongings across state lines are professional movers, truck rental companies and container services that provide and transport self-storage containers that you fill yourself. Although each service has its own perks, prices can vary drastically:</p>
+
+<h4>Professional Movers</h4>
+<p>If you opt for full service, the movers will pack, load, ship and unpack all of your belongings, so the only thing left for you to do is to tell them where to park the couch. Many people choose to do the packing themselves to save money and ensure proper handling.</p>
+
+<p>Estimating the costs of professional moving services isn’t as easy as jumping online. Some moving companies send an expert to your home to evaluate your items and provide a quote. Unlike moving trucks and shipping services, movers often do not factor in mileage as much as weight of cargo. Professional movers can get pricey, but their services will allow you to focus on other pressing issues surrounding a move.</p>
+
+<h4>Truck Rental Companies:</h4>
+<p>Renting a moving truck is not for everyone. You have to be comfortable driving a large vehicle without a rearview mirror (using side mirrors instead), and you need to be aware of the added length and width of the vehicle when changing lanes and maneuvering through narrow streets. Most truck rental companies do not offer any training on how to drive a large truck, so first-timers may need time to adjust. Typically, the only requirements for renting a moving truck are that the driver be 25 years of age or older and have a valid driver’s license.</p>
+
+<p>Truck rental companies usually base their rates on the size of the truck (measured in length from 10-foot to 26-foot trucks), distance of travel, days of use and insurance. Additional items such as appliance dollies (around $10 for two) and furniture pads (around $10 for a dozen) are optional. Make sure to evaluate the size of your truck against your belongings so you don’t pay for unnecessary space. Many rental trucks are equipped with a towing apparatus so you can hitch your car along for the ride. Don’t forget to factor in fuel costs.</p>
+
+<h4>Shipping Container Companies</h4>
+<p>Shipping services that deliver storage containers to your current home take the hassle out of transporting your items. You specify where you want the company to put the container (e.g., in the driveway or in a designated spot on the street). You pack the container however you like, securing it with your own padlock.</p>
+
+<p>On a designated move date, the company returns to pick up your container and ship it to your destination, where you’ll unpack at your leisure. If you don’t know where you will be living in your new city yet, the shipping company often will hold the container at a storage facility. You can store your items for a monthly rate (similar to self-storage lockers), however you cannot access your belongings while they are in storage.</p>
+
+<p>Prices vary according to the destination and by container size. Containers come in various sizes that usually accommodate between one to three rooms’ worth of stuff — if you need more, you have to rent multiple containers. Keep in mind that these containers take up space and you are not able to move them on your own. Ideally you should have a driveway or private parking space (both in your departure city and your destination) to accommodate the container for at least a couple days while you load and unload.</p>
+
+<h4>Obtain Estimates</h4>
+<p>Do your due diligence before signing a contract with a moving, truck rental or shipping company. Obtain at least three shipping cost estimates from different companies in order to ensure the best deal. User-review sites can help you find the most reliable companies. You might also ask friends and family on social media for recommendations.</p>
+
+<h4>Get Insured</h4>
+<p>Anything can happen when all of your worldly possessions are packed into one space, speeding down the highway. Although moving companies provide insurance options to protect your belongings, it is important to understand the nuances of each package. The U.S. Department of Transportation outlines typical moving insurance options on its website.</p>
+
+<h4>Keep Your Valuables Close</h4>
+<p>That heirloom Rolex, your grandmother’s pearls and that 1952 Mickey Mantle rookie baseball card are the types of items you should not send packing with the replaceable dishware. Keep irreplaceable items with you at all times, whether you are driving or flying.</p>
+
+<h4>Update Your Information</h4>
+<p>Moving out of state can be overwhelming, but it is important that you update your information in your new location as soon as possible. You can update recurring bills, such as car and student loans, as well as credit card and bank accounts online or by phone once you secure a new address. As for regular day-to-day mail, this online form alerts the U.S. Postal Service of your address change and will forward your mail for up to a year.</p>
+
+<p>You also will need to obtain a new driver’s license and vehicle registration. Each state sets different timelines. Visit your local DMV to check that off your to-do list. While you’re there, ask for a pamphlet on state driving laws. For example, you might be surprised to find that it is illegal to drive while operating a cellphone in your new state. Do your research and know the laws before you get dinged with a ticket. After you’ve registered, don’t forget to update your car insurance policy.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">7 Tips for Paying off Your Credit Card Debt <span class="text-muted small">BY JASON STEELE SEPTEMBER 3, 2020</span></h2>
+      
+<hr>
+
+<p>2020 has been a year of challenges for all of us. But the upheaval might also bring with it great opportunity.
+
+Before the COVID-19 pandemic, a report by the Federal Reserve Bank found that 55% of Americans with credit cards had debt. But for those who are lucky enough to still have jobs, the crisis has also turned America into a nation of savers: Most people are spending far less of their time and money on discretionary purchases such as vacations, entertainment and dining out.
+
+With fewer expenses and uncertain times ahead for the economy, you may have a unique opportunity to pay off your credit card debt. Here are smart strategies to help you out.</p>
+
+
+<p>7 Ways to Start Paying off Credit Card Debt Today</p>
+<p>1. Make your payments early and often. The amount of credit card interest you’re charged is based your account’s average daily balance. That means that every day you wait to make a payment, you’ll have to pay more interest.
+
+It’s important to understand that you don’t have to wait until your payment due date to pay down some of your balance, and you aren’t limited to making just one payment each month. For example, you could make a payment twice a month — possibly just after you receive your paychecks — or even once a week. By quickly using your money to pay down your credit card balance, you won’t have the chance to change your mind later and use it to splurge on something else. Just make sure that at least one payment covers the minimum during each statement period. You must do this, even if you’ve made multiple payments during the previous statement period.</p>
+
+<p>2. Get a balance transfer card. Despite the current economic troubles, there are still several credit cards offered by major issuers that include 0% APR financing for balance transfers. Taking advantage of one of these offers will allow you to avoid interest charges while you pay down your debt. This means that 100% of your payments will go towards your principal, allowing you to pay off the balance much sooner than you could have otherwise.
+
+Current offers include the Citi Double Cash, which features 18 months of 0% APR on balance transfers, and the PenFed Gold Visa® Credit Card, which has 12 months of interest free financing on balance transfers and a low standard interest rate for purchases. For more information, read: The Best 0% APR Credit Cards Available Right Now.</p>
+
+<p>3. Focus on debt with the highest interest rates first. This is the traditional way of paying off debt while reducing your interest costs.</p>
+
+<p>4. Or consider the “debt snowball” approach. Instead of focusing on your balances with the highest interest rates, this strategy popularized by personal finance expert Dave Ramsey involves paying off your smallest balances first, so that you achieve some “quick wins.” The idea is that this helps you build momentum towards paying off larger balances. This can make the most sense when your outstanding balances have relatively similar interest rates.</p>
+
+<p>5. Look into personal loans. If you’re unable to qualify for a balance transfer credit card, then you could apply for a personal loan to consolidate your debt. Try asking your bank or credit union, or looking into a social lending program.
+Personal Loans can get you back on track.</p>
+
+
+<p>6. Give your budget a makeover. Go through all of your monthly expenses, and try to reduce or eliminate the least necessary spending. This could mean cancelling your cable TV, switching to a lower cost mobile phone plan, or just reducing the number of nights you order takeout.</p>
+
+<p>7. Get help. If all of these ideas aren’t enough to help you reduce your credit card debt, then it might be time to seek assistance. You can start by consulting a credit counselor from the Department of Justice’s approved list, which may recommend a debt management plan to consolidate and pay off your debt. If that isn’t sufficient, it may be time to talk to a bankruptcy attorney.</p>
+
+<p>Bottom Line: How to Pay Down Credit Card Debt
+President Kennedy once noted the similarity between the Chinese characters meaning “crisis” and “opportunity.” By taking this unique opportunity to devote your discretionary budget to paying off your credit card debt, you can use this moment to better prepare your family’s finances for whatever comes next.</p>
+
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2017-2020 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</main>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+<script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+<div class="container mt-4">
+
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Budget</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Add Expenses</li>
+  </ol>
+</nav>
+
+
+<div class="card">
+    <div class="card-body">
+    <form action=""method='post'>
+        <div class"form-group">
+            <label for="">Amount</label>
+            <input type="number" class="form-control-sm" name="amount">    
+        
+        </div>
+        <div class"form-group">
+            <label for="">Description</label>
+            <input type="number" class="form-control-sm" name="description">    
+        
+        </div>
+        <div class"form-group">
+            <label for="">Category</label>
+            <select name="category"> 
+            <option name="category">1</option>
+            <option name="category" >2</option>
+            <option name="category" >3</option>
+            <option name="category">4</option>
+            </select>   
+        
+        </div>
+         <div class"form-group">
+            <label for="">Date of Transaction</label>
+            <input type="date" class="form-control-sm" name="transaction_date">    
+        
+        </div>
+        
+        
+        
+        
+
+
+
+{% block content %}
+
+
+<h1>Add Expense</h1>
+
+{% endblock content %}
+
+
+ <!-- Add this link: [<a class="btn btn-info btn-lg" href="/" role="button">Sample page</a>] to the button to link pages through the button -->
